@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>bajo</groupId>
+	<artifactId>bajo-nemoo-web</artifactId>
+	<version>1.0</version>
+	<packaging>war</packaging>
+	<name>Bajo Nemoo Web</name>
+	<description>Bajo Nemoo Web</description>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.1</version>
+		<relativePath />
+	</parent>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>17</java.version>
+		<bajo.version>1.0</bajo.version>
+		<ysh.version>1.0</ysh.version>
+	</properties>
+	<dependencies>
+		<!-- YSH Core -->
+		<dependency>
+			<groupId>ysh</groupId>
+			<artifactId>ysh-core-spring</artifactId>
+			<version>${ysh.version}</version>
+		</dependency>
+		<!-- BAJO  -->
+		<dependency>
+			<groupId>bajo</groupId>
+			<artifactId>bajo-nemoo</artifactId>
+			<version>${bajo.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>net.ysh.nemoo.application.NemooSpringServer</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

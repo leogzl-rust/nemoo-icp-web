@@ -1,0 +1,23 @@
+# Spring Configuration
+
+server:
+  port: ${ysh.server.port}
+
+spring:
+  main:
+    web-application-type: none
+  security:
+    oauth2:
+      client:
+        registration:
+          SEA01:
+            client-id: ${ysh.connect-list.SEA01.auth-id}
+            client-secret: ${ysh.connect-list.SEA01.auth-secret}
+            authorization-grant-type: password
+        provider:
+          SEA01:
+            token-uri: ${ysh.connect-list.SEA01.auth-url}
+  profiles:
+    include:
+      - ysh
+      - nemoo
