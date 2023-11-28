@@ -33,6 +33,21 @@
 			<artifactId>bajo-nemoo</artifactId>
 			<version>${bajo.version}</version>
 		</dependency>
+		
+		<!-- ICP Requires v5.2.2; fail if use v5.1.2 -->
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5 -->
+		<dependency>
+			<groupId>org.apache.httpcomponents.client5</groupId>
+			<artifactId>httpclient5</artifactId>
+			<version>5.2.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.core5/httpcore5 -->
+		<dependency>
+			<groupId>org.apache.httpcomponents.core5</groupId>
+			<artifactId>httpcore5</artifactId>
+			<version>5.2.3</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>

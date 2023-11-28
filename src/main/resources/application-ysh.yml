@@ -1,1 +1,12 @@
 ysh:
+  server:
+    port                : 9099
+  connect-list:
+    XDT01:
+      client-id         : XDT01
+      business-url      : https://sso.n-tco.com/auth
+      user-name         : u01
+      password          : zaq1@WSX
+      auth-url          : https://sso.n-tco.com/auth/realms/YSH/protocol/openid-connect/token
+      auth-id           : bajo
+      auth-secret       : jkP4I8IYCRQSCq5J0xfQ5u8DhblDLHlC
