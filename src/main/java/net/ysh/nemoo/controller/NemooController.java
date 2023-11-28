@@ -1,14 +1,11 @@
 package net.ysh.nemoo.controller;
 
-import java.net.URISyntaxException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.ysh.nemoo.bean.icp.IcpNemooController;
-import net.ysh.nemoo.bean.icp.IcpNemooProxy;
 import net.ysh.nemoo.command.NemooCommand;
 import net.ysh.nemoo.service.NemooService;
 import net.ysh.rest.YshRestConstant;
