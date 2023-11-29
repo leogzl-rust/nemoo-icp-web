@@ -1,1 +1,4 @@
-onyx:
+nemoo:
+  icp:
+    location    : https://icp-api.io/
+    canister    : 5qcyi-haaaa-aaaal-qcmna-cai

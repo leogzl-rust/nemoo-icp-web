@@ -2,11 +2,11 @@ ysh:
   server:
     port                : 9099
   connect-list:
-    XDT01:
-      client-id         : XDT01
-      business-url      : https://sso.n-tco.com/auth
-      user-name         : u01
-      password          : zaq1@WSX
+    SEA01:
+      client-id         : SEA01
+      business-url      : https://app.bajo.id
+      user-name         : seamless01
+      password          : CoDg90BC0Aop96e1RQIjU74x1sBRfeIecTxCmpsGUWqJt6ECOE
       auth-url          : https://sso.n-tco.com/auth/realms/YSH/protocol/openid-connect/token
       auth-id           : bajo
-      auth-secret       : jkP4I8IYCRQSCq5J0xfQ5u8DhblDLHlC
+      auth-secret       : mv4IBGgwmQROuM0wchBIqLiyjjh4bGJO
