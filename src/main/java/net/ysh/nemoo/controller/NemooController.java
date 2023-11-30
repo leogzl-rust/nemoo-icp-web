@@ -1,7 +1,5 @@
 package net.ysh.nemoo.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,7 +32,7 @@ public class NemooController implements NemooCommand, YshCommand {
 
 	@Override
 	@GetMapping(value = IcpNemooController.GET_ICP_COMMAND)
-	public String getIcpCommand(HttpServletRequest request) throws Exception {
+	public String getIcpCommand() throws Exception {
 		return nemooController.getCommand();
 	}
 
@@ -43,7 +41,7 @@ public class NemooController implements NemooCommand, YshCommand {
 			consumes = MediaType.APPLICATION_JSON_VALUE, //
 			produces = MediaType.APPLICATION_JSON_VALUE //
 	)
-	public @ResponseBody Nemoo getFish(HttpServletRequest request, @RequestBody Nemoo input) throws Exception {
+	public @ResponseBody Nemoo getFish(@RequestBody Nemoo input) throws Exception {
 		Fish fish = nemooController.getFish(input.getFishId());
 
 		Nemoo output = new Nemoo();
@@ -57,7 +55,7 @@ public class NemooController implements NemooCommand, YshCommand {
 			consumes = MediaType.APPLICATION_JSON_VALUE, //
 			produces = MediaType.APPLICATION_JSON_VALUE //
 	)
-	public @ResponseBody Nemoo getFisher(HttpServletRequest request, @RequestBody Nemoo input) throws Exception {
+	public @ResponseBody Nemoo getFisher(@RequestBody Nemoo input) throws Exception {
 		Fisher fisher = nemooController.getFisher(input.getFisherId());
 
 		Nemoo output = new Nemoo();
@@ -71,7 +69,7 @@ public class NemooController implements NemooCommand, YshCommand {
 			consumes = MediaType.APPLICATION_JSON_VALUE, //
 			produces = MediaType.APPLICATION_JSON_VALUE //
 	)
-	public @ResponseBody Nemoo saveFish(HttpServletRequest request, @RequestBody Nemoo input) throws Exception {
+	public @ResponseBody Nemoo saveFish(@RequestBody Nemoo input) throws Exception {
 		String message = nemooController.saveFish(input.getFish());
 
 		Nemoo output = new Nemoo();
@@ -85,7 +83,7 @@ public class NemooController implements NemooCommand, YshCommand {
 			consumes = MediaType.APPLICATION_JSON_VALUE, //
 			produces = MediaType.APPLICATION_JSON_VALUE //
 	)
-	public @ResponseBody Nemoo saveFisher(HttpServletRequest request, @RequestBody Nemoo input) throws Exception {
+	public @ResponseBody Nemoo saveFisher(@RequestBody Nemoo input) throws Exception {
 		String message = nemooController.saveFisher(input.getFisher());
 
 		Nemoo output = new Nemoo();
