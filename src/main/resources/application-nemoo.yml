@@ -1,4 +1,4 @@
 nemoo:
   icp:
-    location    : https://icp-api.io/
-    canister    : 5qcyi-haaaa-aaaal-qcmna-cai
+    location    : http://localhost:59155/
+    canister    : huw6a-6uaaa-aaaaa-qaaua-cai
